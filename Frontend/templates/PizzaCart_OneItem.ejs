@@ -1,0 +1,15 @@
+<div class="ct-typeorder">
+    <span class="ct-name"><%= pizza.title %> (<%= size.string %>)<img src="<%= pizza.icon %>"
+                                                                                            class="ct-image"></span>
+    <div class="ct-icons">
+        <div class="diameter-icon"><%= pizza[size.field].size %></div>
+        <div class="weight-icon"><%= pizza[size.field].weight %></div>
+    </div>
+    <div class="ct-buttons">
+        <span class="ct-price"><%= pizza[size.field].price %>грн</span>
+        <a class="btn btn-danger glyphicon glyphicon-minus dec-button"></a>
+        <span class="ct-amount"><%= quantity %></span>
+        <a class="btn btn-success glyphicon glyphicon-plus inc-button"></a>
+        <a class="btn button-remove glyphicon glyphicon-remove rem-button"></a>
+    </div>
+</div>

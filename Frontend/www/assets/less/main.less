@@ -1,0 +1,195 @@
+@mainColor: orange;
+@h3Color: #ea862e;
+@background: #e0daca;
+@cartSize: 300px;
+@screen-xs: 768px;
+
+#cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: @cartSize;
+
+  background-color: white;
+
+  box-shadow: 0 0 5px 1px gray;
+
+  z-index: 20;
+}
+
+#range {
+  padding-right: @cartSize + 20px;
+}
+
+#range-navbar {
+  padding-right: @cartSize;
+  z-index: 10;
+  opacity: 0.9;
+  min-width: 550px;
+}
+
+#range-nav {
+  display: inline-block;
+}
+
+.range-nav-center {
+  text-align: center;
+}
+
+.range-head {
+  text-align: center;
+}
+
+#head-label {
+  display: inline-block;
+}
+
+#head-counter {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: @h3Color;
+  font-weight: bold;
+  color: white;
+  padding: 4px 10px;
+  border-bottom: 10px;
+  vertical-align: middle;
+}
+
+#head-label:after {
+  display: inline-block;
+  content: " ";
+  width: 10px;
+}
+
+.nav-pills a {
+  color: #ff7a00 ;
+}
+
+.nav-pills .active a{
+  background-color: @h3Color ;
+  color: white ;
+}
+
+#main {
+  min-width: 610px;
+}
+
+#navbar-main {
+  padding-left: 130px;
+  color: gray;
+}
+
+.navbar-first-line {
+  border-bottom: 1px solid;
+  height: 45px;
+  margin-right: 15px;
+
+  .navbar-phone {
+    font-size: 15px;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  .navbar-allhours {
+    font-size: 15 px;
+    padding:10px;
+  }
+
+  .navbar-delivery {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    vertical-align: middle;
+  }
+}
+
+.navbar-second-line {
+  .navbar-second-line-pizza {
+    font-size: 23px;
+    padding: 5px;
+    color: @h3Color;
+  }
+}
+
+.footer {
+  padding-right: @cartSize;
+  text-align: center;
+  border-top: lightgray 1px solid;
+  width: 100%;
+    height: 100px;
+   
+    padding: 60px;
+    border-radius: 0.5px;
+    color: @mainColor ;
+    text-align: center;
+}
+
+.diameter-icon:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../../assets/images/size-icon.svg");
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.weight-icon:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../../assets/images/weight.svg");
+  width: 9px;
+  height: 12px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+@media (max-width: @screen-xs) {
+  .navbar-first-line
+  {
+    height: 30px;
+    .navbar-phone {
+      font-size: 12px;
+    }
+    .btn {
+      margin-top: 37px;
+      margin-bottom: 5px;
+      display: block;
+    }
+  }
+}
+
+input.invalid-feedback {
+	border: 1px solid red;
+}
+
+input.valid-feedback {
+	border: 1px solid green;
+}
+
+.invalid-feedback {
+	color: red;
+}
+
+.valid-feedback {
+	color: green;
+}
+
+.help-block {
+	color: red;
+}
+
+#googleMap {
+    width: 100%;
+	height: 300px;
+}
+
+@import "pizza/pizza-card.less";
+@import "pizza/labels.less";
+@import "pizza/cart.less";

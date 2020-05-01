@@ -1,0 +1,115 @@
+<% include common/header.ejs %>
+
+<div id="main" class="container-fluid">
+    <div id="range" class="container">
+        <div id="range-navbar" class="navbar navbar-fixed-top navbar-inverse">
+            <div id="navbar-main">
+                <div class="navbar-first-line">
+                    <div class="navbar-phone">(044) 101 5 610</div>
+                    <div class="visible-md-inline-block visible-lg-inline-block navbar-allhours">24 години/7 днів на тиждень</div>
+                    <div class="visible-lg-inline-block navbar-delivery">Безкоштовна доставка піци</div>
+                    <button class="btn btn-warning" style="width:60px ;height:30px ; float: right">Увійти</button>
+                </div>
+                <div class="navbar-second-line">
+                    <div class="navbar-second-line-pizza visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Піца</div>
+                </div>
+            </div>
+        </div>
+        <div class="label-top">
+            <div class="label-text">
+                <div class="first-text">PIZZA</div>
+                <div class="second-text">KMA</div>
+            </div>
+            <img src="assets/images/discount.svg">
+        </div>
+        <div class="label-bottom">
+            <img src="assets/images/discount.svg">
+            <div class="label-text">
+                <div class="label-first-text">ЦЬОГО</div>
+                <div class="label-first-text">ТИЖНЯ</div>
+                <div class="label-first-text">НА ВСЕ</div>
+                <div class="label-second-text">-20%</div>
+            </div>
+		</div>
+		
+        <div class="col-xs-12" style="height:120px"></div>
+		
+		<div class="form-description">
+			1. Контактні дані
+		</div>
+		<form class="form-horizontal">
+			<div class="form-group name-group">
+				<label class="col-sm-2 control-label" id="name-label">Ім’я</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="inputName" name="inputName" placeholder="Ім’я Прізвище">
+				</div>
+				<span class="help-block" id="name-error" style="display:none">
+					Введіть тільки власне ім’я, без цифр
+					</span>
+			</div>
+			<div class="form-group phone-group">
+				<label class="col-sm-2 control-label" id="phone-label">Телефон</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="inputPhone" name="inputPhone" placeholder="+380994010999">
+				</div>
+				<span class="help-block" id="phone-error" style="display:none">
+					Введіть номер телефону у форматі +380 або почніть з 0
+					</span>
+			</div>
+			<div class="form-group address-group">
+				<label class="col-sm-2 control-label" id="address-label">Адреса</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="inputAddress" name="inputAddress" placeholder="Київ, вул. Спаська, 2">
+				</div>
+				<span class="help-block" id="address-error" style="display:none">
+					Введіть адресу доставки піци
+					</span>
+			</div>
+		</form>
+
+		<div class="bs-callout bs-callout-warning">
+			<h4>Інформація про замовлення</h4>
+			<p>
+				<b>Приблизний час доставки: </b>
+				<b class="order-time" id="time-result">невідомий</b>
+			</p>
+			<p>
+				<b>Адреса доставки: </b>
+				<b class="order-address font-weight-light" id="address-result">невідома</b>
+			</p>
+		</div>
+
+		<div class="col-md-5 time-address-info">
+
+		</div>
+
+		<div id="googleMap">
+
+		</div>
+		<div>
+			<div class="form-group next-step-wrap">
+				<a id="forward" class="btn btn-warning" style="float: right">Далі <span
+				class="glyphicon glyphicon-menu-right" ></span></a>
+			</div>
+		</div>
+
+    </div>
+    <div id="cart">
+        <div id="cart-head">
+            <div class="ct-order">Замовлення</div>
+            <div id="ct-count">2</div>
+        </div>
+        <div id="ct-container" class="ct-container"></div>
+        <div class="cart-bottom">
+            <div class="ct-summ">
+                <p class="ct-summ-t">Сума замовлення</p>
+                <p id="ct-summ"></p>
+            </div>
+            <div id="ct-order">
+            <button class="btn btn-default" id="edit">Редагувати замовлення</button>
+            </div>
+        </div>
+	</div>
+</div>
+
+<% include common/footer.ejs %>
